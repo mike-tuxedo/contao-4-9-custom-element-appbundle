@@ -1,0 +1,3 @@
+services:
+    TextCustomBundle\Controller\ContentElement\TextCustomController:
+        autoconfigure: true 

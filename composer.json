@@ -1,0 +1,28 @@
+{
+    "type": "project",
+    "require": {
+        "contao/calendar-bundle": "4.9.*",
+        "contao/comments-bundle": "4.9.*",
+        "contao/conflicts": "*@dev",
+        "contao/faq-bundle": "4.9.*",
+        "contao/listing-bundle": "4.9.*",
+        "contao/manager-bundle": "4.9.*",
+        "contao/news-bundle": "4.9.*",
+        "contao/newsletter-bundle": "4.9.*"
+    },
+    "extra": {
+        "contao-component-dir": "assets"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Contao\\ManagerBundle\\Composer\\ScriptHandler::initializeApplication"
+        ],
+        "post-update-cmd": [
+            "Contao\\ManagerBundle\\Composer\\ScriptHandler::initializeApplication"
+        ]
+    },
+    "autoload": {
+        "psr-4": { "TextCustomBundle\\": "src/TextCustomBundle/" },
+        "classmap": ["app/ContaoManagerPlugin.php"]
+    }
+}
